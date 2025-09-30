@@ -1,0 +1,120 @@
+*, *::before, *::after {box-sizing: border-box;}
+body {
+  font-family: Consolas, Microsoft JhengHei, sans-serif;
+  margin: 0px;
+  display: flex;
+  height: 100vh;
+  font-weight: bold; font-size: 18px;
+  color: #ffffff;
+  background: #1a1a1a;
+  transition: 0.3s;
+}
+
+.Title {
+  font-size: 28px;
+  margin: 15px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.Title:hover {
+  background: linear-gradient(90deg,
+  #ff0077 0% ,#00ffaa 20%,#0077ff 30%,
+  #ff0077 50%,#00ffaa 70%,#0077ff 78%,
+  #ff0077 100%);
+  background-size: 200% auto;
+  background-clip: text; -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-move 2s linear infinite;
+}
+@keyframes gradient-move {
+  0%   {background-position: 0%   50%;}
+  100% {background-position: 100% 50%;}
+}
+
+a::before {bottom: 0; left:  0;}
+a::after  {top:    0; right: 0;}
+a:hover::before {width: 100%;}
+a:hover::after  {width: 100%;}
+a {
+  text-decoration: none;
+  position: relative;
+  width: max-content;
+  margin: 5px; padding: 5px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+a::before, a::after {
+  content: '';
+  position: absolute;
+  width: 0%; height: 2px;
+  background: linear-gradient(90deg, #ff0077, #00ffaa, #0077ff);
+  transition: 0.3s;
+}
+a:hover {
+  color: #00ffaa;
+  border-left: 2px solid #ff0077;
+  border-right: 2px solid #0077ff;
+  transition: 0.3s;
+}
+
+.outside-menu {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #444444;
+  border-bottom: 0px;
+  width: 250px;
+  padding: 15px;
+  background: #222222;
+  transition: 0.3s;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  transition: 0.3s;
+}
+.main {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  background: #1a1a1a;
+  transition: 0.3s;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+@media (max-width: 1000px) {
+  body {flex-direction: column;}
+  .outside-menu {
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #444444;
+  }
+  .Title {
+    font-size: 20px;
+    margin: 10px 10px 10px 3px;
+  }
+  .menu {
+    font-size: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  a {
+    text-decoration: none;
+    position: relative;
+    width: max-content;
+    margin: 2px;  padding: 2px 5px;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+}
