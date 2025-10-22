@@ -1,28 +1,80 @@
 <!DOCTYPE html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+  <link rel="stylesheet" href="./index.css">
   <title>HW2 Feature 1</title>
-  <link rel="stylesheet" href="./index.css" />
 </head>
+
 <body>
-  <h1>HW2 Feature 1 Demo</h1>
+  <h1>Ciallo～(∠・ω< )⌒★</h1>
+  <br>
 
-  <button id="openPopupBtn">Open Popup</button>
-
-  <!-- 背景遮罩 -->
   <div id="overlay" class="hidden"></div>
-
-  <!-- Popup 視窗 -->
-  <div id="popup" class="hidden">
+  <audio id="ciallo" src="./ciallo.mp3" muted autoplay></audio>
+  <button id="openPopupBtn">Play Senren*Banka</button>
+  <br>
+  
+  <div id="popup1" class="hidden">
     <div class="popup-content">
-      <span id="closePopupBtn" class="close-btn">&times;</span>
-      <h2>Popup Window</h2>
-      <p>This is a popup window. You can put any content here!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
-      <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra.</p>
+      <span id="closePopupBtn1" class="close-btn">&times;</span>
+      <h2>Ciallo～(∠・ω< )⌒★</h2>
+      <img src="./ciallo.gif">
     </div>
   </div>
+  <div id="popup2" class="hidden">
+    <div class="popup-content">
+      <span id="closePopupBtn2" class="close-btn">&times;</span>
+      <h2>Playing Senren*Banka...</h2>
+      <p>你先在steam搜索“千戀*萬花”點擊購買安裝好後立即運行打開千戀萬花</p>
+      <p>在主頁面點擊開始遊戲進入遊戲頁面，然後依次選擇</p>
+      <p>“說實話”、“不好說”、“我覺得很可愛”、“單獨行動”、“摸摸頭”、“感覺有點擔心……”</p>
+      <p>和“還是別說多於的話比較好”進入叢雨路線</p>
+      <br><br>
+      <p>什麼千戀萬花 (慌亂) (把筆記本熄屏) (四處張望) 我不玩千戀萬花</p>
+      <p>(慌亂地把筆記本藏到身後) (假裝冷靜) (試圖走近解釋) (摔倒) (狼狽爬起) (再次摔倒) (著急) (抓你們褲腳) (驚慌)</p>
+      <p>我不玩千戀萬花啊求求你們別鄙視我，求求你們不要不和我玩 (慌亂) 我……我真沒玩過什麼galgame</p>
+      <p>(眼神四處亂瞟) (驚恐) (哭泣) (在地上打滾) (想起身後的筆記本) (丟掉筆記本) 我…我筆記本是用來玩原神的我真的不是柚子廚……</p>
+      <p>(發瘋) (跳走) (尖叫) 你們不要問了啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊我真的很容易死的！！！ (陰暗地逃跑) 我真的不是柚子廚啊😭</p>
+      <p>我才不會表演那個的😱</p>
+      <p>就是那個………………………</p>
+      <p>Ciallo～(∠・ω< )⌒☆</p>
+      <br><br>
+      <p>《千戀＊萬花》是日本美少女遊戲品牌Yuzusoft（柚子社）製作的一款和風戀愛題材作品。</p>
+      <p>本作也是柚子社創立十周年的紀念作，在發售當年除展現出勢如破竹的高人氣外還贏取了大量獎項。</p>
+      <p>除在2016年萌系遊戲大賞中獲得年度准大賞以及在Getchu所舉辦的2016年美少女遊戲大賞中獲得綜合類排名第一之外</p>
+      <p>在劇本、系統、圖像、音樂、影片、角色等各個獎項中也均有斬獲。</p>
+      <p>STEAM版本收錄簡體中文版、繁體中文版、英文版和日語版的內容並支持遊戲內切換，並支持雲存儲、多達26個成就以及手柄控制等功能。</p>
+      <p>声明：本作中的所有角色在游戏剧情发生时均已超过18岁。</p>
+    </div>
+  </div>
+  <br>
+
+  <div id="currentTime">0s</div>
+  <div id="ad" class="hidden">
+    <div class="popup-content">
+      <span id="closeAdBtn1" class="close-btn">&times;</span>
+      <a href="https://store.steampowered.com/app/1144400/_/" target="_blank">
+        <h2>Play Senren*Banka Now</h2>
+      </a>
+    </div>
+  </div>
+  <br><br><br><br><br>
+
+  <button id="startBtn">See Some Cool Things</button>
+  <div class="container">
+    <div class="box" id="box1"><img src="./1.jpg"></div>
+    <div class="box" id="box2"><img src="./2.jpg"></div>
+    <div class="box" id="box3"><img src="./3.jpg"></div>
+    <div class="box" id="box4"><img src="./4.jpg"></div>
+    <div class="box" id="box5"><img src="./5.jpg"></div>
+  </div>
+
+  <div class="side-element left"  id="left1" >愛春融、愛助教٩(ˊᗜˋ )و </div>
+  <div class="side-element right" id="right1">快去玩千戀*萬花</div>
+  <div class="side-element left"  id="left2" >Ciallo～(∠・ω< )⌒★</div>
+  <div class="side-element right" id="right2">我期中要讀不完了QAQ</div>
+
 </body>
 <script src="./index.js"></script>
