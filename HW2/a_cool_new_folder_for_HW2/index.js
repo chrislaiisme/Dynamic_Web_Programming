@@ -75,3 +75,12 @@ function handleScrollFade() {
 }
 
 window.addEventListener("scroll", handleScrollFade);
+document.addEventListener("DOMContentLoaded", () => {
+  const title = "Ciallo～(∠・ω< )⌒★ㅤㅤ";
+  let idx = 0;
+
+  setInterval(() => {
+    document.title = title.substring(idx) + title.substring(0, idx);
+    idx = (idx+1) % title.length;
+  }, 300);
+});
