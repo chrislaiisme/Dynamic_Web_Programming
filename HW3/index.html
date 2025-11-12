@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <title>Blackjack</title>
-</head>
-<body>
-  <div id="game-table">
-    <header>
-      <h1>The Black Jack Tavern</h1>
-      <p id="game-message">Place your wagers, good player.</p>
-    </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack HW3</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Black Jack</h1>
 
-    <div class="status-section dealer-area">
-      <h2>The Dealer's Hand</h2>
-      <p>Score: <span id="dealer-score">?</span></p>
-      <div id="dealer-hand" class="card-container">No Cards Dealt</div>
-    </div>
-
-    <hr class="separator">
-
-    <div class="status-section player-area">
-      <h2>Your Hand (Player)</h2>
-      <div id="player-status">
-        <p>Score: <span id="player-score">0</span></p>
-        <div id="player-hand" class="card-container">No Cards Dealt</div>
-        <p>Status: <span id="player-bust">Awaiting Play</span></p>
+    <div id="game-container">
+      <div id="dealer-area" class="person-area">
+        <div class="name">Dealer</div>
+        <img src="./wideCRH.png">
+        <div id="dealer-info"> Score: <span id="dealer-score">-</span> </div>
+        <div id="dealer-cards" class="cards-display"></div>
       </div>
-    </div>
-    
-    <div class="actions">
-      <button id="hit-btn" class="action-btn">Take Another Card (Hit)</button>
-      <button id="stand-btn" class="action-btn">Hold Your Hand (Stand)</button>
-      <button id="reset-btn" class="action-btn reset-btn">Begin Anew (Reset)</button>
+      <div id="players-area"></div>
     </div>
 
-    <div class="storage-actions">
-      <button id="display-storage-btn" class="storage-btn">Show Game Records</button>
-      <button id="cheat-btn" class="storage-btn cheat-btn">Dealer's Unfair Advantage (Cheat)</button>
+    <div id="game-message" class="message-area">Click "Start Round" to start a round.</div>
+
+    <div id="bet-controls">
+      <label for="bet-range">Bet Amount: $<span id="current-bet-display">-</span></label>
+      <input type="range" id="bet-input" value="50" min="10" max="500" step="10" disabled>
+      <button id="bet-btn" disabled>Confirm Bet</button>
     </div>
 
-    <div id="storage-display" class="storage-table-container">
-      <h3>Ancient Ledgers of Play</h3>
-      <div id="local-storage-data"></div>
-      <div id="session-storage-data"></div>
+    <div id="controls">
+      <button        id="start-btn"> Start Round  </button>
+      <button        id=  "hit-btn"> Hit          </button>
+      <button        id="stand-btn"> Stand        </button>
+      <button id="display-data-btn"> Show Records </button>
+      <button        id="reset-btn"> Reset Game   </button>
+      <button        id="cheat-btn"> Cheat OFF    </button>
     </div>
 
+    <div id="player-count-control">
+      <label for="player-count-input">Number of Players (1-5):</label>
+      <input type="number" id="player-count-input" value="3" min="1" max="5">
+      <button id="set-players-btn">Set Players</button>
+    </div>
+
+    <div id="data-display-area"></div>
+
+    <div id="music-controls">
+      <audio id="background-music" loop src="./music/bgm.mp3"></audio>
+      <button id="toggle-music-btn">Play BGM</button>
   </div>
 
-  <script src="index.js"></script>
-</body>
+    <script src="./global.js" defer></script>
+    <script src="./storage.js" defer></script>
+    <script src="./game.js" defer></script>
+  </body>
 </html>
